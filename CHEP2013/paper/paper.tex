@@ -46,44 +46,75 @@ tests will be reported.
 
 \section{Description of suite design}
 % Marcin
-- philosophy: simple, standard and long term solution
-- bird's eye view all over the project
-
+philosophy: simple, standard and long term solution\\
+bird's eye view all over the project\\
  
 \section{The Dirac extension} 
 % Rafal
-- extension structure description
-- Dirac general purpose project short description + Dirac configuration
-- service and systems description in detail
-- web interface components description
+- extension structure description\\
+- Dirac general purpose project short description + Dirac configuration\\
+- service and systems description in detail\\
+- web interface components description\\
 
 
 \section{Bookkeeping DB integration}
 % Milosz -> SQLAlchemy
 % Luca, Christian -> SBK
-- Software layer based on SQLAlchemy
--- advantages using SQLAlchemy: Object relational Mapping, clean code, fast
--- development, change of DB backend
-- BK description, highlighting the general purpose characteristics
--- session, request, dataset concept
+- Software layer based on SQLAlchemy\\
+-- advantages using SQLAlchemy: Object relational Mapping, clean code, fast\\
+-- development, change of DB backend\\
+- BK description, highlighting the general purpose characteristics\\
+-- session, request, dataset concept\\
 
  
 \section{Job wrapper component}
 % Bruno, Armando
-- general workflow
-- data management policy: stage-in and stage out strategies
+- general workflow\\
+- data management policy: stage-in and stage out strategies\\
  
 \section{Simulation production use case: the SuperB experience}
 % Bruno
-- general description: workflow, Dirac portal design
-- past experience: the webui project
--- Session definition interface --> DB dynamic build up
+- general description: workflow, Dirac portal design\\
+- past experience: the webui project\\
+-- Session definition interface --> DB dynamic build up\\
  
 \section{Test session}
 % Bruno
-- goal description
-- testbed description
-- results and conclusions
+A test session was performed aiming to demonstrate the awareness of SuperBDIRAC to integrate the monitoring of a bookkeeping database in DIRAC.
+\subsection{Goal description}
+DIRAC capabilities and performance as job management tool are well documented (insert some reference). Super$B$ distributed simulation stack (WebUI + SBK + Severus) was successfully used in 3 simulation campaigns (ask to Armando for confirmation and references).\\
+Test goal was to demonstrate SuperBDIRAC is capable of substitute WebUI as monitoring tool for job submission, showing data from a bookkeeping database. Test "Q-factor" was the exact corrispondence of information as stored in SBK and displayed in SuperBDIRAC, like in WebUI monitoring page. Correct execution of simulation jobs is not important while the bookkeping information are properly managed.
+
+\subsection{Testbed description}
+
+\begin{figure}[h]
+\includegraphics[width=14pc]{img/testbed.eps}\hspace{2pc}%
+\begin{minipage}[b]{14pc}\caption{\label{label}Testbed schema.}
+\end{minipage}
+\end{figure}
+
+FastSim job submission is created via WebUI interface (see figure to be inserted). Once submission is created, a set of scripts and configuration files are created whose path is reported by WebUI interface: in particular the path of php submission script is taken to be be parsed. Since WebUI is still linked with SBK, this portal acts as well as monitoring portal, useful for a check-cross between info displayed in SBK, WebUI and SuperBDIRAC.\\
+
+A python script (mc\_production.py) acts as parser for php submission script and interface with DIRAC client. Once taken all submission parameter, mc\_production.py uses DIRAC API to submit jobs to DIRAC server.\\
+
+DIRAC server receive jobs from DIRAC client, than starts the normal workflow for job management in DIRAC: scheduling, pilot submission, payload retrieval and execution, stageout. Since DIRAC server is equipped with SuperBDIRAC, even bookkeeping monitoring is performed by this component.\\
+
+In SBK the job submission insertion is performed by WebUI, while later info are updated by Severus script executed with every job submitted. Severus interact with SBK via REST interface, while WebUI and SuperBDIRAC have direct acces to SBK since they are in the same LAN area (ask to Armando for confirmation).\\
+
+Jobs were submitted via grid by DIRAC server. Submission was performed using WMS instead of using direct submission to CREAM CE.\\
+
+Submission site was INFN-T1, which ensured CPU time to execute latest simulations related to Super$B$ once the experiment closure.
+
+\subsection{Test description}
+
+Every job simulated 3000 events: this value was chosen to have an execution time of about 10 minutes.
+Physical parameters were the same of several official productions.
+3 main bunch submission of 400 jobs were performed at INFN-T1 to obtain a total 1200 simulations.
+In addition, 2 bunch submission of 10 jobs were performed, again at INFN-T1, to force some failure message in SBK and catch it even in SuperBDIRAC monitoring. In summary, 1220 jobs were submitted for test.\\
+
+Since test goal, several screenshots of WbUI and SuperBDIRAC monitoring were saved, in addition to SBK data screenshots.
+
+\subsection{Results and conclusions}
 
 \section{Conclusions}
 
