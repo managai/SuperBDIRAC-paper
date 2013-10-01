@@ -4,6 +4,9 @@ SuperBDIRAC-paper
 ## CHEP2013
 http://www.chep2013.org/proceedings
 
+## IEEE 2013
+http://www.nss-mic.org/2013/
+
 ## git howto
 
 adding a file  
