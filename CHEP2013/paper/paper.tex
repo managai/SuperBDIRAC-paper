@@ -4,28 +4,16 @@
 \begin{document}
 \title{Dirac integration with a general purpose bookkeeping DB: a complete general suite for distributed resources exploitation}
 
-\author{M Chrzaszcz, C De Santis$^1$, G Donvito$^2$, A Fella$^3$, R Grzymkowski, B Santeramo$^{2,4}$, L Tomassetti$^{5,6}$, M Zdybal}
-%\address{\textsuperscript {1} Institution, Country}
-\address{$^1$ INFN - Sezione di Roma Tor Vergata, Roma, Italy}
-\address{$^2$ INFN - Sezione di Bari, Bari, Italy}
-\address{$^3$ NFN - Sezione di Pisa, Pisa, Italy}
-\address{$^4$ Dipartimento di Fisica dell’Universit\'a e del Politecnico di Bari, Bari, Italy}
-\address{$^5$ Dipartimento di Matematica e Informatica, Universit\'a di Ferrara, Ferrara, Italy}
-\address{$^6$ INFN - Sezione di Ferrara, Ferrara, Italy}
+\author{M Chrzaszcz$^{1,2}$, C De Santis$^3$, G Donvito$^4$, A Fella$^{5,6}$, R Grzymkowski$^2$, B Santeramo$^{4,7}$, L Tomassetti$^{6,8}$, M Zdybal$^2$}
+\address{$^1$ Physik-Institut, Universitat Zurich, Zurich, Switzerland}
+\address{$^2$ Henryk Niewodniczanski Institute of Nuclear Physics Polish Academy of Sciences, Krakow, Poland}
+\address{$^3$ INFN - Sezione di Roma Tor Vergata, Roma, Italy}
+\address{$^4$ INFN - Sezione di Bari, Bari, Italy}
+\address{$^5$ NFN - Sezione di Pisa, Pisa, Italy}
+\address{$^6$ Dipartimento di Matematica e Informatica, Universit\'a di Ferrara, Ferrara, Italy}
+\address{$^7$ Dipartimento di Fisica dell’Universit\'a e del Politecnico di Bari, Bari, Italy}
+\address{$^8$ INFN - Sezione di Ferrara, Ferrara, Italy}
 \ead{bruno.santeramo@ba.infn.it}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% (in drafts/<username> we can place drafts...)
-%
-% DRAFTS USEFUL TO COMPLETE THIS PAPER
-% TO REMOVE BEFORE SUBMISSION
-%
-%\cleardoublepage 
-%\include{drafts/bruno/job_submission}
-%\include{drafts/bruno/todo_list}
-%\include{drafts/bruno/preparing_test}
-%\cleardoublepage 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{abstract}
 In the context of High Energy Physics computing field the R\&D studies aimed to
@@ -50,44 +38,105 @@ tests will be reported.
 
 \section{Introduction}
 
+In HEP as well in other fields, needs to manage and analyze huge amount of data or simulate large amount of events is a typical issue.
+Today exist several solutions available for this purpose, but lot of them are developed for particular needs of a specific customer.
+During Super$B$ R\&D activities, was deployed a solution useful for Super$B$ itself but capable to be easily adopted by a generic small and mid-size VO.
+
 \section{Description of suite design}
 % Marcin
-philosophy: simple, standard and long term solution\\
-bird's eye view all over the project\\
+%philosophy: simple, standard and long term solution\\
+%bird's eye view all over the project\\
+
+In order to develop a simple, standard and long term solution, suite components (adopted or developed) are flexible enough to be adapted in order to fulfill needs of a generic VO. Suite components are DIRAC, the Information System and the Job Wrapper (see figure \ref{fig:project_bird_eye}).\\
+DIRAC is a well known and widely adopted framework to manage Grid resources, job submission, workflow definition, user authentication, authorization and accounting. The Information System holds metadata related to simulations and information about dataset structures and data placement on Grid resources. Information System is a PostgreSQL database. DIRAC interact with Information System via SQLAlchemy. A REST interface permits updating of Information System to Job Wrapper. The Job Wrapper, executed in bundle with jobs, updates Information System about simulations status and data placement. Job Wrapper is a python script.
 
 \begin{figure}[h]
-\includegraphics[width=26pc]{img/distributed_system_bird_eye.eps}\hspace{2pc}%
-\caption{\label{fig:distributed_system_bird_eye_view}Distributed System bird's eye view.}
+\includegraphics[width=26pc]{img/project_bird_eye.eps}\hspace{2pc}%
+\caption{\label{fig:project_bird_eye}Project bird's eye view.}
 \end{figure}
+
+%\begin{figure}[h]
+%\includegraphics[width=26pc]{img/distributed_system_bird_eye.eps}\hspace{2pc}%
+%\caption{\label{fig:distributed_system_bird_eye_view}Distributed System bird's eye view.}
+%\end{figure}
  
 \section{The Dirac extension} 
 % Rafal
-- extension structure description\\
-- Dirac general purpose project short description + Dirac configuration\\
-- service and systems description in detail\\
-- web interface components description\\
-
+DIRAC, born as LHCb MonteCarlo production software, at present time is a complete solution to deploy distributed resources, suitable for large and small communities. DIRAC manage user authentication, authorization and accounting via X509 certificates, allows to apply VO defined scheduling policies, is able to manage resources made available via different grids, cluster, cloud and desktop computer (via BOINC). Data management capabilities include gLite/EGI storage elements as well DIRAC Storage Elements, LCG File Catalog (LFC) as well DIRAC File Catalog (DFC). Webportal offers both user and administrative functionalities. Interfaces can be made using DIRAC API (in python) or RESTful interface language neutral). DIRAC is widely adopted by large and small communities.\\
+DIRAC can be extended to add specific functionalities to fulfill needs of customers. In Super$B$ needs was an interface with a PostgreSQL BookKeeping database and a webportal able to display monitoring data from this database. DIRAC extension developed is named SuperBDIRAC.
+DIRAC Service is a way to export functionalities. In SuperBDIRAC a new service, named SBKService, offers an SQLAlchemy layer able to connect DIRAC itself with a generic SQL DBMS. SBKService maps the bookkeeping (SBK) database using Object Relational Mapping (see section \ref{sec:db}). 
+Webportal extension is designed to create and manage simulations, monitoring related jobs and sites. Integration of new functionalities in webportal permits to use only one interface to manage and monitor the entire stack of simulation related tasks.
 
 \section{Bookkeeping DB integration}
+\label{sec:db}
 % Milosz -> SQLAlchemy
 % Luca, Christian -> SBK
-- Software layer based on SQLAlchemy\\
--- advantages using SQLAlchemy: Object relational Mapping, clean code, fast\\
--- development, change of DB backend\\
-- BK description, highlighting the general purpose characteristics\\
--- session, request, dataset concept\\
-
+%- Software layer based on SQLAlchemy\\
+%-- advantages using SQLAlchemy: Object relational Mapping, clean code, fast\\
+%-- development, change of DB backend\\
+%- BK description, highlighting the general purpose characteristics\\
+%-- session, request, dataset concept\\
+%****************\\
+%Considered alternatives: Psycopg and SQLAlchemy\\
+%Why SQLAlchemy?\\
+%Powerful object-relational mapping\\
+%Elegant, easy to write and read code\\
+%Works with wide variety of database backends\\
+%*************************\\
+MonteCarlo events production need a method to identify data files and Storage Elements
+that holds them. A BookKeeping database have been developed to manage metadata associated with
+data files. The same database stores information about simulations, executed jobs and output data, site availability
+in terms of installed and supported software.
+BookKeeping database is used also to schedule jobs submisison in order to complete simulations.
+Database, named SBK (Super$B$ BookKeeping) is modeled to fulfill general requirements of a typical simulation production.
+Entities in SBK are Session, Production and Request (see figure \ref{fig:BK_entities}). Session defines a simulation (eg. FastSim and FullSim): parameters and software for simulation are defined by VO managers. Production is a Session subset to produce needed events to simulate a particular scenario (eg. background in detector).
+Request is a Production subset. The desired number of events to complete a Request is defined during its creation.
+Final stage is job submission to complete a Request. Request completion is monitored via SBK, allowing job re-submission in order to complete it. SBK design uses the relational model, and the current implementation uses the PostgreSQL RDBMS in 
+a centralized way.\\
+SBK integration in DIRAC is based on SQLAlchemy \cite{ref:sqlalchemy}. SQLAlchemy use Object Relational Mapper paradigm: database entities are mapped as python objects. SQLAlchemy adoption simplify code writing, reading and documenting. SQLAlchemy provides an abstraction layer capable to manage in a trasparent way a wide variety of database backends, giving freedom to change it without needs to re-write code.
 
 \begin{figure}[h]
 \includegraphics[width=26pc]{img/BK_entities.eps}\hspace{2pc}%
 \caption{\label{fig:BK_entities}Entities in BookKeeping database.}
 \end{figure}
+
+\begin{figure}[h]
+\includegraphics[width=26pc]{img/SBKService.eps}\hspace{2pc}%
+\caption{\label{fig:SBKService}SBKService schema.}
+\end{figure}
  
 \section{Job wrapper component}
 \label{sec:severus}
-% Bruno, Armando
-- general workflow\\
-- data management policy: stage-in and stage out strategies\\
+
+Job wrapper named Severus takes care of main simulation job operations (FastSim and FullSim in Super$B$ use case):
+\begin{itemize}
+\item copy software to WN
+\item copy input files to WN
+\item copy output files in SE and register them in LFC
+\item copy log in SE and bookkeping DB
+\item update job status in bookkeeping DB
+\end{itemize}
+
+\begin{figure}[h]
+\includegraphics[width=26pc]{img/severus_workflow.eps}\hspace{2pc}%
+\caption{\label{fig:severus_workflow}Severus workflow.}
+\end{figure}
+
+Access type (lcg or direct) from the worker node to the SE of the site is automatically recognized and implemented using lcg utils.
+A module for each session takes care of properly setting environment variables according to simulation (aka session).
+A configuration file customizes its behavior at execution time.
+Configuration file has several sections:
+\begin{itemize}
+\item OPTIONS: general parameters
+\item SOFTWARE: info about the executable
+\item REST: info about the REST interface to be used for communications with DB
+\item SITE: info about the submission site where the job will be runnign. A moduile for eache site is loaded
+\item TARGETSITE:  info about site where replicas of output files must be done
+\item INPUT: info about input files for the job
+\item OUTPUT: info for stage-out phase
+\item EXPORT VARS: list of envvars to be exported on the WN
+\item SESSION\_NAME: key-value pairs for simulation parameters, for specified session
+\end{itemize}
  
 \section{Simulation production use case: the SuperB experience}
 % Bruno
@@ -205,10 +254,12 @@ Table \ref{tab:status_update} reports, for every test, how many status were save
 SuperBDIRAC could be considered good enough to integrate in DIRAC the capability of monitoring jobs metadata from a bookkeeping database.
 
 \section{Conclusions}
+DIRAC is a mature and stable framework to manage all grid-related tasks, easily adoptable by small as well large VOs.
+The Information System is designed to be adapted for a generic huge simulation production.
+The Job Wrapper acts as a bridge between simulation jobs and Information System.
+We propose SuperBDIRAC as a DIRAC extension capable to satisfy the needs of small and mid size VOs in terms of distributed
+resource exploitation.
 
-- We are offering a Dirac extended suite capable to satisfy the
-needs on small and mid size VOs in terms of distributed
-resource exploitation....
 
 %% \begin{figure}
 %% \begin{center}
@@ -337,9 +388,9 @@ Software Architectures }, PhD Thesis, University of California Irvine
 \bibitem{ref:webui}
 A.Fella, E.Luppi, L.Tomassetti \emph{A General Purpose Suite for Job Management, Bookkeeping and Grid Submission}. International Journal of Grid Computing \& Applications (IJGCA) Vol.2, No.2, June 2011. DOI: 10.5121/ijgca.2011.2202.
 
+\bibitem{ref:sqlalchemy}
+\verb"http://www.sqlalchemy.org/"
+
 \end{thebibliography}
 
-
 \end{document}
-
-
