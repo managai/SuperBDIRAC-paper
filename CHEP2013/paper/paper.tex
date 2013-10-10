@@ -1,6 +1,7 @@
 \documentclass[a4paper]{jpconf}
 \usepackage{graphicx}
 \usepackage{listings}
+\usepackage{multirow}
 \begin{document}
 \title{Dirac integration with a general purpose bookkeeping DB: a complete general suite for distributed resources exploitation}
 
@@ -9,9 +10,9 @@
 \address{$^2$ Henryk Niewodniczanski Institute of Nuclear Physics Polish Academy of Sciences, Krakow, Poland}
 \address{$^3$ INFN - Sezione di Roma Tor Vergata, Roma, Italy}
 \address{$^4$ INFN - Sezione di Bari, Bari, Italy}
-\address{$^5$ NFN - Sezione di Pisa, Pisa, Italy}
+\address{$^5$ INFN - Sezione di Pisa, Pisa, Italy}
 \address{$^6$ Dipartimento di Matematica e Informatica, Universit\'a di Ferrara, Ferrara, Italy}
-\address{$^7$ Dipartimento di Fisica dell’Universit\'a e del Politecnico di Bari, Bari, Italy}
+\address{$^7$ Dipartimento Interateneo di Fisica dell’Universit\'a e del Politecnico di Bari, Bari, Italy}
 \address{$^8$ INFN - Sezione di Ferrara, Ferrara, Italy}
 \ead{bruno.santeramo@ba.infn.it}
 
@@ -38,20 +39,25 @@ tests will be reported.
 
 \section{Introduction}
 
-In HEP as well in other fields, needs to manage and analyze huge amount of data or simulate large amount of events is a typical issue.
-Today exist several solutions available for this purpose, but lot of them are developed for particular needs of a specific customer.
-During Super$B$ R\&D activities, was deployed a solution useful for Super$B$ itself but capable to be easily adopted by a generic small and mid-size VO.
+In HEP as well in other fields, the necessity to manage and analyze huge amount of data or simulate large amount of events is a typical issue.
+Today several solutions available for this purpose exist, but lot of them are developed for particular needs of a specific customer.
+During Super$B$ R\&D activities, a solution useful for Super$B$ was deployed which can be easily adopted by a generic small and mid-size VO.
 
-\section{Description of suite design}
+\section{Suite description}
 % Marcin
 %philosophy: simple, standard and long term solution\\
 %bird's eye view all over the project\\
 
-In order to develop a simple, standard and long term solution, suite components (adopted or developed) are flexible enough to be adapted in order to fulfill needs of a generic VO. Suite components are DIRAC, the Information System and the Job Wrapper (see figure \ref{fig:project_bird_eye}).\\
-DIRAC is a well known and widely adopted framework to manage Grid resources, job submission, workflow definition, user authentication, authorization and accounting. The Information System holds metadata related to simulations and information about dataset structures and data placement on Grid resources. Information System is a PostgreSQL database. DIRAC interact with Information System via SQLAlchemy. A REST interface permits updating of Information System to Job Wrapper. The Job Wrapper, executed in bundle with jobs, updates Information System about simulations status and data placement. Job Wrapper is a python script.
+In order to develop a simple, standard and long term solution, suite components (adopted or developed) should be flexible enough to be adapted in order to fulfill needs of a generic VO.\\
+Suite components include DIRAC\cite{ref:dirac}, the Information System and the Job Wrapper (see figure \ref{fig:project_bird_eye}).\\
+\begin{itemize}
+\item DIRAC is a well known and widely adopted framework to manage Grid resources, job submission, workflow definition, user authentication, authorization and accounting.
+\item The Information System holds metadata related to simulations and information about dataset structures and data placement on Grid resources. Information System is a PostgreSQL\cite{ref:postgres} database. DIRAC interact with Information System via SQLAlchemy\cite{ref:sqlalchemy}.
+\item The Job Wrapper, executed in bundle with jobs, updates Information System about simulations status and data placement using a REST interface. Job Wrapper is a python script.
+\end{itemize}
 
 \begin{figure}[h]
-\includegraphics[width=26pc]{img/project_bird_eye.eps}\hspace{2pc}%
+\includegraphics[width=26pc]{img/project_bird_eye_2.eps}\hspace{2pc}%
 \caption{\label{fig:project_bird_eye}Project bird's eye view.}
 \end{figure}
 
@@ -62,9 +68,10 @@ DIRAC is a well known and widely adopted framework to manage Grid resources, job
  
 \section{The Dirac extension} 
 % Rafal
-DIRAC, born as LHCb MonteCarlo production software, at present time is a complete solution to deploy distributed resources, suitable for large and small communities. DIRAC manage user authentication, authorization and accounting via X509 certificates, allows to apply VO defined scheduling policies, is able to manage resources made available via different grids, cluster, cloud and desktop computer (via BOINC). Data management capabilities include gLite/EGI storage elements as well DIRAC Storage Elements, LCG File Catalog (LFC) as well DIRAC File Catalog (DFC). Webportal offers both user and administrative functionalities. Interfaces can be made using DIRAC API (in python) or RESTful interface language neutral). DIRAC is widely adopted by large and small communities.\\
-DIRAC can be extended to add specific functionalities to fulfill needs of customers. In Super$B$ needs was an interface with a PostgreSQL BookKeeping database and a webportal able to display monitoring data from this database. DIRAC extension developed is named SuperBDIRAC.
-DIRAC Service is a way to export functionalities. In SuperBDIRAC a new service, named SBKService, offers an SQLAlchemy layer able to connect DIRAC itself with a generic SQL DBMS. SBKService maps the bookkeeping (SBK) database using Object Relational Mapping (see section \ref{sec:db}). 
+DIRAC, born as LHCb MonteCarlo production software, at present time is a complete solution to deploy distributed resources, suitable for large and small communities. DIRAC manage user authentication, authorization and accounting via X509 certificates, applies VO defined scheduling policies, is capable to manage resources made available via different grids, cluster, cloud and desktop computer (via BOINC). Data management capabilities include gLite/EGI storage elements as well DIRAC Storage Elements, LCG File Catalog (LFC) as well DIRAC File Catalog (DFC). The DIRAC webportal offers both user and administrative functionalities. Interfaces can be made using DIRAC API (in python) or a language neutral RESTful interface). DIRAC is widely adopted by large and small communities.\\
+DIRAC can be extended to add specific functionalities required by the user. For example in Super$B$\cite{ref:superb_tdr} needs was an interface with a PostgreSQL BookKeeping database and a webportal able to display monitoring data from this database where required. This particular DIRAC extension was named SuperBDIRAC.
+%DIRAC Service is a way to export functionalities. 
+In SuperBDIRAC a new service, named SBKService, was added to offer an SQLAlchemy layer able to connect DIRAC to a generic SQL DBMS. SBKService maps the bookkeeping (SBK) database using Object Relational Mapping (see section \ref{sec:db}). 
 Webportal extension is designed to create and manage simulations, monitoring related jobs and sites. Integration of new functionalities in webportal permits to use only one interface to manage and monitor the entire stack of simulation related tasks.
 
 \section{Bookkeeping DB integration}
@@ -83,17 +90,16 @@ Webportal extension is designed to create and manage simulations, monitoring rel
 %Elegant, easy to write and read code\\
 %Works with wide variety of database backends\\
 %*************************\\
-MonteCarlo events production need a method to identify data files and Storage Elements
+MonteCarlo events production needs a method to identify data files and Storage Elements
 that holds them. A BookKeeping database have been developed to manage metadata associated with
 data files. The same database stores information about simulations, executed jobs and output data, site availability
 in terms of installed and supported software.
 BookKeeping database is used also to schedule jobs submisison in order to complete simulations.
 Database, named SBK (Super$B$ BookKeeping) is modeled to fulfill general requirements of a typical simulation production.
-Entities in SBK are Session, Production and Request (see figure \ref{fig:BK_entities}). Session defines a simulation (eg. FastSim and FullSim): parameters and software for simulation are defined by VO managers. Production is a Session subset to produce needed events to simulate a particular scenario (eg. background in detector).
-Request is a Production subset. The desired number of events to complete a Request is defined during its creation.
-Final stage is job submission to complete a Request. Request completion is monitored via SBK, allowing job re-submission in order to complete it. SBK design uses the relational model, and the current implementation uses the PostgreSQL RDBMS in 
-a centralized way.\\
-SBK integration in DIRAC is based on SQLAlchemy \cite{ref:sqlalchemy}. SQLAlchemy use Object Relational Mapper paradigm: database entities are mapped as python objects. SQLAlchemy adoption simplify code writing, reading and documenting. SQLAlchemy provides an abstraction layer capable to manage in a trasparent way a wide variety of database backends, giving freedom to change it without needs to re-write code.
+Entities in SBK are Session, Production and Request (see figure \ref{fig:BK_entities}). Session defines a simulation (eg. FastSim and FullSim): parameters and software for simulation are defined by VO managers. Production is a Session subset that produce all the  needed to simulate a particular scenario (eg. background in detector).
+Request is a Production subset. The required number of events to complete a Request is defined during its creation.
+Final step is submission of jobs needed to complete a Request. Request completion is monitored via SBK, allowing job re-submission in order to complete it. SBK design uses the relational model, and the current implementation uses a centralized PostgreSQL RDBMS.\\
+SBK integration in DIRAC is based on SQLAlchemy. SQLAlchemy uses Object Relational Mapper paradigm: database entities are mapped as python objects. SQLAlchemy adoption simplify code writing, reading and documenting\footnote{SQLAlchemy provides an abstraction layer capable to manage in a trasparent way a wide variety of database backends, giving freedom to change it without needs to re-write code.}. 
 
 \begin{figure}[h]
 \includegraphics[width=26pc]{img/BK_entities.eps}\hspace{2pc}%
@@ -108,7 +114,7 @@ SBK integration in DIRAC is based on SQLAlchemy \cite{ref:sqlalchemy}. SQLAlchem
 \section{Job wrapper component}
 \label{sec:severus}
 
-Job wrapper named Severus takes care of main simulation job operations (FastSim and FullSim in Super$B$ use case):
+Job wrapper named Severus takes care of main operations of the simulation job:
 \begin{itemize}
 \item copy software to WN
 \item copy input files to WN
@@ -122,7 +128,7 @@ Job wrapper named Severus takes care of main simulation job operations (FastSim 
 \caption{\label{fig:severus_workflow}Severus workflow.}
 \end{figure}
 
-Access type (lcg or direct) from the worker node to the SE of the site is automatically recognized and implemented using lcg utils.
+Access type (lcg or direct) from the worker node to the site SE is automatically recognized and implemented using lcg utils.
 A module for each session takes care of properly setting environment variables according to simulation (aka session).
 A configuration file customizes its behavior at execution time.
 Configuration file has several sections:
@@ -131,22 +137,21 @@ Configuration file has several sections:
 \item SOFTWARE: info about the executable
 \item REST: info about the REST interface to be used for communications with DB
 \item SITE: info about the submission site where the job will be runnign. A moduile for eache site is loaded
-\item TARGETSITE:  info about site where replicas of output files must be done
-\item INPUT: info about input files for the job
+\item TARGETSITE:  info about site where replicas of output files must be written
+\item INPUT: info about the job input files
 \item OUTPUT: info for stage-out phase
 \item EXPORT VARS: list of envvars to be exported on the WN
-\item SESSION\_NAME: key-value pairs for simulation parameters, for specified session
+\item SESSION\_NAME: key-value pairs for simulation parameters, for the specified session
 \end{itemize}
  
 \section{Simulation production use case: the SuperB experience}
 % Bruno
 Simulation Production is designed to manage huge MonteCarlo productions.
 A webportal, named WebUI\cite{ref:webui}, is available to manage the entire stack of operations related to this use case: user management, definition of new "Sessions", "Productions" and "Request", job submission and monitoring, sites management for productions. 
-Production manager users can add and delete sites, add and delete CEs and SEs, set a site a site as enabled/disabled and supported/unsopported for a given session, manage "Sessions", "Productions" and "Request". These actions involve only BookKeeping database, building up automatically required tables.
+Production manager users can add and delete sites, add and delete CEs and SEs, set a site as enabled/disabled and supported/unsopported for a given session, manage "Sessions", "Productions" and "Request". These actions involve only BookKeeping database, building up automatically required tables.
 Shifter users can submit and monitor jobs for a given Request. Job submission in WebUI is performed via Ganga\cite{ref:ganga}, while configurations files for submission are generated by WebUI itself taking data from SBK. Ganga submit jobs to grid via WMS using standard gLite commands. Job execution on WNs is driven by Severus (see section \ref{sec:severus}), while job status updates in SBK is performed via REST interface. Stagein and Stageout as well as LFC registration of output files is performed even by Severus. See figure \ref{fig:simulation_production_workflow} for Simulation Production workflow.\\
 
-SuperBDIRAC goal is porting WebUI functionalities in DIRAC to manage jobs, distributed resources and metadata related to a MonteCarlo production using a BookKeeping database.
-Job submission is directly managed by DIRAC. Grid computing resources can be used via WMS or direct submission to CREAM CEs, computer clusters can be accessed via ssh connections, Cloud resources are available via VMDIRAC module, even desktop computers can be used via Boinc. User authentication via X509 certificates and authorization VOMS-role based are builtin in DIRAC.
+SuperBDIRAC goal was the porting of the WebUI functionalities in DIRAC to manage jobs and their submission directly from DIRAC and exploite all the funcionalities available in DIRAC: ie. Grid computing resources can be used via WMS or direct submission to CREAM CEs, computer clusters can be accessed via ssh connections, Cloud resources are available via VMDIRAC module, even desktop computers can be used via Boinc. User authentication via X509 certificates and authorization VOMS-role based are builtin in DIRAC.
 SuperBDIRAC enhance DIRAC integrating the generic bookkeeping database SBK via SQLAlchemy.
 DIRAC webportal is extended in order to provide an interface for Production manager actions as well as shifter tasks.
 At present time not all WebUI functionalities are yet ported in SuperBDIRAC, but site and job monitoring from SBK are available.
@@ -172,7 +177,7 @@ In section \ref{sec:test} are reported results of first SuperBDIRAC functionalit
 A functionality test was performed to demonstrate the capability of SuperBDIRAC to integrate the monitoring of a bookkeeping database in DIRAC webportal.
 \subsection{Goal description}
 DIRAC capabilities and performance as job management tool are well documented (insert some reference). Super$B$ distributed simulation stack (WebUI + SBK + Severus) was successfully used in 3 simulation campaigns (ask to Armando for confirmation and references).\\
-Functionality Test goal is to demonstrate if SuperBDIRAC is capable of substitute WebUI as monitoring tool for job submission, showing data from a bookkeeping database. Test "Q-factor" is the exact correspondence of information as stored in SBK and displayed in SuperBDIRAC, like in WebUI monitoring page. Correct execution of simulation jobs is not important while the bookkeping information are properly managed.
+Functionality Test objective is to demonstrate that SuperBDIRAC is capable of substituting WebUI as monitoring tool for job submission and showing data from a bookkeeping database. Test "Q-factor" is the exact correspondence of information as stored in SBK and displayed in SuperBDIRAC, like in WebUI monitoring page. Correct execution of simulation jobs is not important as long as the bookkeping information is properly managed.
 
 \subsection{Testbed description}
 
@@ -183,14 +188,14 @@ Functionality Test goal is to demonstrate if SuperBDIRAC is capable of substitut
 \end{figure}
 
 At present time, not all WebUI functionalities are implemented in SUperBDIRAC, in particular "Submission" job for a given "Request".
-The following procedure was followed to perform this test. FastSim job submission is created via WebUI interface. Once submission is created, a set of scripts and configuration files are created whose path is reported by WebUI interface: in particular the path of php submission script is taken to be be parsed. This php submission script, generated by WebUI, is made of an array with all relevant parameters and commands to UI in order to submit jobs in grid via standard glite commands.
-Since WebUI is still linked with SBK, this portal could be used as well as monitoring portal, useful for a check-cross between info displayed in SBK, WebUI and SuperBDIRAC.\\
+Therefore the following procedure was followed to perform this test. FastSim job submission is created via WebUI interface. Once submission is created, a set of scripts and configuration files are created whose path is shown by WebUI interface. In particular the php submission script, generated by WebUI, is made of an array with all relevant parameters and UI commands needed to submit jobs in grid via standard glite commands.
+Since WebUI is still linked with SBK, its portal could be used as well as monitoring portal, useful for a check-cross between info displayed in SBK, WebUI and SuperBDIRAC.\\
 
-The php submission script is parsed by a python script (mc\_production.py), in particular the params array, in order to retrieve all needed paramenters to properly submit jobs: production series, session name, min and max runnumber, configuration files location, physical parameters, events to simulate. Once taken all these parameters, mc\_production.py uses DIRAC API to prepare and submit jobs via DIRAC client.
+The php submission script is parsed by a python script (mc\_production.py), in particular the params array, in order to retrieve all needed paramenters to properly submit jobs via DIRAC: production series, session name, min and max runnumber, configuration files location, physical parameters, events to simulate. Once taken all these parameters, mc\_production.py uses DIRAC API to prepare and submit jobs via DIRAC client.
 
 DIRAC server receive jobs from DIRAC client, than starts the normal workflow for job management in DIRAC: scheduling, pilot submission, payload retrieval and execution, stageout. Since DIRAC server is equipped with SuperBDIRAC, even bookkeeping monitoring is performed by this component.\\
 
-In SBK the job submission insertion is performed by WebUI, while later info are updated by Severus script executed with every job submitted. Severus interact with SBK via REST interface, while WebUI and SuperBDIRAC have direct access to SBK since they are in the same LAN area (ask to Armando for confirmation).\\
+In SBK the job submission insertion is performed by WebUI, while later info are updated by Severus script executed with every submitted job. Severus interact with SBK via REST interface, while WebUI and SuperBDIRAC have direct access to SBK since they are in the same LAN area (ask to Armando for confirmation).\\
 
 Jobs were submitted via grid by DIRAC server. Submission was performed using WMS instead of using direct submission to CREAM CE.\\
 
@@ -200,11 +205,11 @@ Submission site was INFN-T1, which ensured CPU time to execute latest simulation
 
 Every job simulated 3000 events: this value is set to have an execution time quite longer than 10 minutes.
 Physical parameters are the same of other official productions.
-3 main bunch submission of 400 jobs were performed at INFN-T1 to obtain a total of 1200 simulations.
+3 main bunch submission of 400 jobs were performed at INFN-T1 to obtain a total of 1200 simulation jobs.
 Status in SBK were "prepared", "running" and "done".
-In addition, 2 bunch submission of 10 jobs were performed, again at INFN-T1, to force some failure message in SBK and catch it even in SuperBDIRAC monitoring. First failure sample was obtained setting a not-existing site as destination for stageout: error was detected during preliminary check, so status in SBK were "prepared" and "failed". In second failure sample, jobs were submitted using a proxy without Role=ProductionManager, so error occurred in stageout phase: status in SBK were "prepared", "running" and "failed". In summary, 1220 jobs were submitted for test.\\
+In addition, 2 bunch submission of 10 jobs were performed, again at INFN-T1, to force some failure messages in SBK and catch it even in SuperBDIRAC monitoring. First failure sample was obtained setting a not-existing site as destination for stageout: error was detected during preliminary check, so status in SBK were "prepared" and "failed". In second failure sample, jobs were submitted using a proxy without Role=ProductionManager, so error occurred in stageout phase: status in SBK were "prepared", "running" and "failed". In summary, 1220 jobs were submitted for test.\\
 
-Since test goal, several screenshots of WebUI and SuperBDIRAC monitoring were saved, in addition to SBK data screenshots.
+During the test execution, several screenshots of WebUI and SuperBDIRAC monitoring were saved, in addition to SBK data screenshots.
 
 \subsection{Results and conclusions}
 
@@ -332,8 +337,20 @@ resource exploitation.
 %% \bibitem{osg} 
 %% \verb"http://www.opensciencegrid.org"
 
-%% \bibitem{dirac} 
-%% \verb"http://diracgrid.org"
+\bibitem{ref:dirac} 
+\verb"http://diracgrid.org"
+
+\bibitem{ref:postgres}
+\verb"http://www.postgresql.org/"
+
+\bibitem{ref:sqlalchemy}
+\verb"http://www.sqlalchemy.org/"
+
+\bibitem{ref:boinc}
+\verb"http://boinc.berkeley.edu/"
+
+\bibitem{ref:superb_tdr}
+Super$B$ Technical Design Report, \verb"http://arxiv.org/abs/1306.5655"
 
 %% %\bibitem{ref:nordugrid} 
 %% %\verb"http://www.norduGrid.org"
@@ -378,18 +395,12 @@ resource exploitation.
 %% \bibitem{ref:hadoop}
 %% \verb"http://hadoop.apache.org/"
 
-\bibitem{ref:superb_tdr}
-Super$B$ Technical Design Report, \verb"http://arxiv.org/abs/1306.5655"
-
 \bibitem{ref:rest}
 Fielding R T 2000 {\it Architectural Styles and The Design of Network-based
 Software Architectures }, PhD Thesis, University of California Irvine
 
 \bibitem{ref:webui}
 A.Fella, E.Luppi, L.Tomassetti \emph{A General Purpose Suite for Job Management, Bookkeeping and Grid Submission}. International Journal of Grid Computing \& Applications (IJGCA) Vol.2, No.2, June 2011. DOI: 10.5121/ijgca.2011.2202.
-
-\bibitem{ref:sqlalchemy}
-\verb"http://www.sqlalchemy.org/"
 
 \end{thebibliography}
 
