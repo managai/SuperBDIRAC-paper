@@ -74,6 +74,25 @@ DIRAC can be extended to add specific functionalities required by the user. For 
 In SuperBDIRAC a new service, named SBKService, was added to offer an SQLAlchemy layer able to connect DIRAC to a generic SQL DBMS. SBKService maps the bookkeeping (SBK) database using Object Relational Mapping (see section \ref{sec:db}). 
 Webportal extension is designed to create and manage simulations, monitoring related jobs and sites. Integration of new functionalities in webportal permits to use only one interface to manage and monitor the entire stack of simulation related tasks.
 
+\section{Bookkeeping DB}
+\label{sec:sbk}
+
+\subsection{Description}
+A BookKeeping database, named SBK (Super$B$ BookKeeping), have been developed to manage metadata associated with data files. The same database stores information about simulations, executed jobs and output data, site availability in terms of installed and supported software.\\
+SBK is used also to schedule jobs submission in order to complete simulations.
+Database is modeled to fulfill general requirements of a typical simulation production.\\
+Entities in SBK are Session, Production and Request (see figure \ref{fig:BK_entities}). Session defines a simulation (eg. FastSim and FullSim): parameters and software for simulation are defined by VO managers. Production is a Session subset that produce all the  needed to simulate a particular scenario (eg. background in detector).\\
+Request is a Production subset. The required number of events to complete a Request is defined during its creation. Request completion is monitored via SBK, allowing job re-submission in order to complete it.\\
+SBK design uses the relational model, and the current implementation relies on PostgreSQL (version 9.1) RDBMS which is SQL compliant and, exploiting its hstore datatype, allows to solve some major architectural issues concerning the dataset management of physical parameters. Hstore fields play a major role in the database architecture because storing sets of key/value pairs within a single PostgreSQL value is useful in various scenarios, such as rows with many attributes that are rarely examined, or semistructured data. Beside hstore, some other powerful PostgreSQL features have been exploited: its procedural language (PL/pgSQL) and schemas for a better management of user privileges. An extensive use of views and trigger procedures has been done too.
+
+\subsection{Normalization studies}
+During the development phase, the SBK database has been continuously analized in order to guarantee its normal form (NF) 1, 2 and 3 compliance. Four hierarchical levels (production, request, submission and ob+log+output+stat) have been identified for fastsim/fullsim to semplify table definitions and relations. In the production version the SBK database is NF1, NF2 and NF3 compliant with exception of hstore fields. A hstore is a string containing key->value couples and for this reason, if splitted into each couple key->value, it's not NF1 compliant. Since hstore fields permit to reduce database complexity and are rarely accessed (~100 updates every 6 months), a trade-off has been accepted keeping hstore columns not normalized.
+
+\subsection{Stress tests}
+Extensive stress tests to check PostgrSQL and HTTP REST interface system robustness have been carried out by means of the Tsung tool (http://tsung.erlang-projects.org/). Tsung allows to create virtual machines for testing scalability and performance of IP based client/server applications in order to do load and stress testing of servers. It can be distributed on several client machines and is capable to simulate hundreds of thousands of virtual users concurrently. For the test phase the REST interface has been configured to establish permanent DB
+connections to save connection slots. During the stress tests up to 100 users*s$^{-1}$ have been created. Each user has carried out a connection and 8 insert/update operations on a mock-up database which reproduced the real behavior of a production job. Stress test results were good, being the system capable to sustain 10000 DB transactions (1 transaction = 1 connection+8 insert/update) in ~100s
+(~900 operations*sec$^{-1}$).
+
 \section{Bookkeeping DB integration}
 \label{sec:db}
 % Milosz -> SQLAlchemy
