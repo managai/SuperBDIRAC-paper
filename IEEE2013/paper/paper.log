@@ -1,0 +1,589 @@
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.10.25)  13 NOV 2013 17:52
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**paper.tex
+(./paper.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, lo
+aded.
+(./IEEEtran.cls
+Document Class: IEEEtran 2007/01/11 V1.7 by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+\@IEEEtrantmpdimenA=\dimen102
+\@IEEEtrantmpdimenB=\dimen103
+\@IEEEtrantmpcountA=\count79
+\@IEEEtrantmpcountB=\count80
+\@IEEEtrantmptoksA=\toks14
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 368.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+\@IEEEnormalsizeunitybaselineskip=\dimen104
+-- This is a 10 point document.
+\CLASSINFOnormalsizebaselineskip=\dimen105
+\CLASSINFOnormalsizeunitybaselineskip=\dimen106
+\IEEEnormaljot=\dimen107
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 726.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 726.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 726.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 726.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 726.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 726.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 726.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 726.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 726.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 726.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 726.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 726.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 726.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 726.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 726.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 726.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 726.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 726.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 726.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 726.
+\IEEEilabelindentA=\dimen108
+\IEEEilabelindentB=\dimen109
+\IEEEilabelindent=\dimen110
+\IEEEelabelindent=\dimen111
+\IEEEdlabelindent=\dimen112
+\IEEElabelindent=\dimen113
+\IEEEiednormlabelsep=\dimen114
+\IEEEiedmathlabelsep=\dimen115
+\IEEEiedtopsep=\skip41
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@IEEEsubequation=\count85
+\abovecaptionskip=\skip42
+\belowcaptionskip=\skip43
+\c@figure=\count86
+\c@table=\count87
+\@IEEEeqnnumcols=\count88
+\@IEEEeqncolcnt=\count89
+\@IEEEtmpitemindent=\dimen116
+\c@IEEEbiography=\count90
+\@IEEEtranrubishbin=\box26
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count91
+))
+\Gin@req@height=\dimen117
+\Gin@req@width=\dimen118
+)
+(./paper.aux
+
+LaTeX Warning: Label `fig:BK_entities' multiply defined.
+
+)
+\openout1 = `paper.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+ (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count92
+\scratchdimen=\dimen119
+\scratchbox=\box27
+\nofMPsegments=\count93
+\nofMParguments=\count94
+\everyMPshowfont=\toks16
+\MPscratchCnt=\count95
+\MPscratchDim=\dimen120
+\MPnumerator=\count96
+\makeMPintoPDFobject=\count97
+\everyMPtoPDFconversion=\toks17
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no “ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no “ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no “ in font ptmr7t!
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 121.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 121.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 121.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 147.
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--154
+
+ []
+
+Package epstopdf Info: Source file: <project_bird_eye_2.eps>
+(epstopdf)                    date: 2013-10-10 23:42:21
+(epstopdf)                    size: 9252598 bytes
+(epstopdf)             Output file: <project_bird_eye_2-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-11-11 16:42:48
+(epstopdf)                    size: 314522 bytes
+(epstopdf)             Command: <repstopdf --outfile=project_bird_eye_2-eps-con
+verted-to.pdf project_bird_eye_2.eps>
+(epstopdf)             \includegraphics on input line 161.
+Package epstopdf Info: Output file is already uptodate.
+<project_bird_eye_2-eps-converted-to.pdf, id=1, 1215.54124pt x 1007.765pt>
+File: project_bird_eye_2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use project_bird_eye_2-eps-converted-to.pdf>
+Package pdftex.def Info: project_bird_eye_2-eps-converted-to.pdf used on input 
+line 161.
+(pdftex.def)             Requested size: 252.94499pt x 209.69936pt.
+
+Overfull \hbox (0.94499pt too wide) in paragraph at lines 161--165
+ [][] 
+ []
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+]
+Package epstopdf Info: Source file: <BK_entities.eps>
+(epstopdf)                    date: 2013-09-30 11:49:07
+(epstopdf)                    size: 55320 bytes
+(epstopdf)             Output file: <BK_entities-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-11-13 11:53:35
+(epstopdf)                    size: 34008 bytes
+(epstopdf)             Command: <repstopdf --outfile=BK_entities-eps-converted-
+to.pdf BK_entities.eps>
+(epstopdf)             \includegraphics on input line 278.
+Package epstopdf Info: Output file is already uptodate.
+
+<BK_entities-eps-converted-to.pdf, id=14, 710.655pt x 237.88875pt>
+File: BK_entities-eps-converted-to.pdf Graphic file (type pdf)
+
+<use BK_entities-eps-converted-to.pdf>
+Package pdftex.def Info: BK_entities-eps-converted-to.pdf used on input line 27
+8.
+(pdftex.def)             Requested size: 252.94499pt x 84.6707pt.
+
+Overfull \hbox (0.94499pt too wide) in paragraph at lines 278--279
+ [][] 
+ []
+
+
+Underfull \hbox (badness 2626) in paragraph at lines 296--298
+\OT1/ptm/m/n/10 SQLAlchemy uses Ob-ject Re-la-tional Map-per paradigm:
+ []
+
+[2 <./project_bird_eye_2-eps-converted-to.pdf> <./BK_entities-eps-converted-to.
+pdf>]
+Package epstopdf Info: Source file: <SBKService.eps>
+(epstopdf)                    date: 2013-10-08 17:38:33
+(epstopdf)                    size: 781874 bytes
+(epstopdf)             Output file: <SBKService-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-11-13 16:19:58
+(epstopdf)                    size: 83906 bytes
+(epstopdf)             Command: <repstopdf --outfile=SBKService-eps-converted-t
+o.pdf SBKService.eps>
+(epstopdf)             \includegraphics on input line 301.
+Package epstopdf Info: Output file is already uptodate.
+ <SBKService-eps-converted-to.pdf, id=229, 541.02126pt x 276.03125pt>
+File: SBKService-eps-converted-to.pdf Graphic file (type pdf)
+
+<use SBKService-eps-converted-to.pdf>
+Package pdftex.def Info: SBKService-eps-converted-to.pdf used on input line 301
+.
+(pdftex.def)             Requested size: 252.94499pt x 129.05237pt.
+
+Overfull \hbox (0.94499pt too wide) in paragraph at lines 301--302
+ [][] 
+ []
+
+Package epstopdf Info: Source file: <severus_workflow.eps>
+(epstopdf)                    date: 2013-10-08 11:32:40
+(epstopdf)                    size: 67711 bytes
+(epstopdf)             Output file: <severus_workflow-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-11-13 16:12:11
+(epstopdf)                    size: 38074 bytes
+(epstopdf)             Command: <repstopdf --outfile=severus_workflow-eps-conve
+rted-to.pdf severus_workflow.eps>
+(epstopdf)             \includegraphics on input line 329.
+Package epstopdf Info: Output file is already uptodate.
+<severus_workflow-eps-converted-to.pdf, id=230, 873.2625pt x 235.88126pt>
+File: severus_workflow-eps-converted-to.pdf Graphic file (type pdf)
+
+<use severus_workflow-eps-converted-to.pdf>
+Package pdftex.def Info: severus_workflow-eps-converted-to.pdf used on input li
+ne 329.
+(pdftex.def)             Requested size: 252.94499pt x 68.32462pt.
+
+Overfull \hbox (0.94499pt too wide) in paragraph at lines 329--330
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Package epstopdf Info: Source file: <SuperBDIRAC_monitoring.eps>
+(epstopdf)                    date: 2013-09-30 13:00:54
+(epstopdf)                    size: 545250 bytes
+(epstopdf)             Output file: <SuperBDIRAC_monitoring-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2013-11-13 16:18:02
+(epstopdf)                    size: 466725 bytes
+(epstopdf)             Command: <repstopdf --outfile=SuperBDIRAC_monitoring-eps
+-converted-to.pdf SuperBDIRAC_monitoring.eps>
+(epstopdf)             \includegraphics on input line 346.
+Package epstopdf Info: Output file is already uptodate.
+
+<SuperBDIRAC_monitoring-eps-converted-to.pdf, id=231, 1104.125pt x 597.23125pt>
+File: SuperBDIRAC_monitoring-eps-converted-to.pdf Graphic file (type pdf)
+<use SuperBDIRAC_monitoring-eps-converted-to.pdf>
+Package pdftex.def Info: SuperBDIRAC_monitoring-eps-converted-to.pdf used on in
+put line 346.
+(pdftex.def)             Requested size: 252.94499pt x 136.8135pt.
+
+Overfull \hbox (0.94499pt too wide) in paragraph at lines 346--347
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 354--359
+\OT1/ptm/m/n/10 Functionality Test ob-jec-tive is to demon-strate that
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 354--359
+\OT1/ptm/m/n/10 Su-perB-DIRAC is ca-pa-ble of sub-sti-tut-ing We-bUI as
+ []
+
+
+Underfull \hbox (badness 3179) in paragraph at lines 354--359
+\OT1/ptm/m/n/10 mon-i-tor-ing tool for job sub-mis-sion and show-ing data
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 354--359
+
+ []
+
+[3 <./SBKService-eps-converted-to.pdf> <./severus_workflow-eps-converted-to.pdf
+> <./SuperBDIRAC_monitoring-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <testbed.eps>
+(epstopdf)                    date: 2013-09-28 19:23:56
+(epstopdf)                    size: 30251 bytes
+(epstopdf)             Output file: <testbed-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-11-13 16:09:36
+(epstopdf)                    size: 17491 bytes
+(epstopdf)             Command: <repstopdf --outfile=testbed-eps-converted-to.p
+df testbed.eps>
+(epstopdf)             \includegraphics on input line 362.
+Package epstopdf Info: Output file is already uptodate.
+
+<testbed-eps-converted-to.pdf, id=243, 395.4775pt x 345.29pt>
+File: testbed-eps-converted-to.pdf Graphic file (type pdf)
+
+<use testbed-eps-converted-to.pdf>
+Package pdftex.def Info: testbed-eps-converted-to.pdf used on input line 362.
+(pdftex.def)             Requested size: 252.94499pt x 220.84784pt.
+
+Overfull \hbox (0.94499pt too wide) in paragraph at lines 362--363
+ [][] 
+ []
+
+
+Underfull \hbox (badness 1394) in paragraph at lines 369--375
+[]\OT1/ptm/m/n/10 DIRAC server re-ceive jobs from DIRAC client, than
+ []
+
+
+Underfull \hbox (badness 7613) in paragraph at lines 369--375
+\OT1/ptm/m/n/10 starts the nor-mal work-flow for job man-age-ment in
+ []
+
+
+Underfull \hbox (badness 3635) in paragraph at lines 369--375
+\OT1/ptm/m/n/10 DIRAC: schedul-ing, pi-lot sub-mis-sion, pay-load re-trieval
+ []
+
+
+Underfull \hbox (badness 8019) in paragraph at lines 369--375
+\OT1/ptm/m/n/10 with Su-perB-DIRAC, even book-keep-ing mon-i-tor-ing is
+ []
+
+
+Underfull \hbox (badness 1552) in paragraph at lines 369--375
+\OT1/ptm/m/n/10 First fail-ure sam-ple was ob-tained set-ting a not-existing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 369--375
+
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 378.
+
+Overfull \hbox (2.84293pt too wide) in paragraph at lines 381--381
+[]\OT1/ptm/m/n/8 Jobs| 
+ []
+
+
+Overfull \hbox (1.22935pt too wide) in paragraph at lines 381--382
+[]\OT1/ptm/m/n/8 success
+ []
+
+
+Overfull \hbox (0.61908pt too wide) in paragraph at lines 383--383
+[]\OT1/ptm/m/n/8 400| 
+ []
+
+
+Overfull \hbox (3.4641pt too wide) in paragraph at lines 383--383
+[]\OT1/ptm/m/n/8 400| 
+ []
+
+
+Overfull \hbox (3.4641pt too wide) in paragraph at lines 383--383
+[]\OT1/ptm/m/n/8 400| 
+ []
+
+
+Overfull \hbox (3.4641pt too wide) in paragraph at lines 383--383
+[]\OT1/ptm/m/n/8 400| 
+ []
+
+
+Overfull \hbox (3.4641pt too wide) in paragraph at lines 383--383
+[]\OT1/ptm/m/n/8 400| 
+ []
+
+
+Overfull \hbox (3.4641pt too wide) in paragraph at lines 383--383
+[]\OT1/ptm/m/n/8 400| 
+ []
+
+
+Overfull \hbox (3.4641pt too wide) in paragraph at lines 383--383
+[]\OT1/ptm/m/n/8 400| 
+ []
+
+
+Overfull \hbox (0.61908pt too wide) in paragraph at lines 384--384
+[]\OT1/ptm/m/n/8 400| 
+ []
+
+
+Overfull \hbox (3.4641pt too wide) in paragraph at lines 384--384
+[]\OT1/ptm/m/n/8 400| 
+ []
+
+
+Overfull \hbox (3.4641pt too wide) in paragraph at lines 384--384
+[]\OT1/ptm/m/n/8 400| 
+ []
+
+
+Overfull \hbox (3.4641pt too wide) in paragraph at lines 384--384
+[]\OT1/ptm/m/n/8 400| 
+ []
+
+
+Overfull \hbox (3.4641pt too wide) in paragraph at lines 384--384
+[]\OT1/ptm/m/n/8 400| 
+ []
+
+
+Overfull \hbox (3.4641pt too wide) in paragraph at lines 384--384
+[]\OT1/ptm/m/n/8 400| 
+ []
+
+
+Overfull \hbox (3.4641pt too wide) in paragraph at lines 384--384
+[]\OT1/ptm/m/n/8 400| 
+ []
+
+
+Overfull \hbox (0.61908pt too wide) in paragraph at lines 385--385
+[]\OT1/ptm/m/n/8 400| 
+ []
+
+
+Overfull \hbox (3.4641pt too wide) in paragraph at lines 385--385
+[]\OT1/ptm/m/n/8 400| 
+ []
+
+
+Overfull \hbox (3.4641pt too wide) in paragraph at lines 385--385
+[]\OT1/ptm/m/n/8 400| 
+ []
+
+
+Overfull \hbox (3.4641pt too wide) in paragraph at lines 385--385
+[]\OT1/ptm/m/n/8 400| 
+ []
+
+
+Overfull \hbox (3.4641pt too wide) in paragraph at lines 385--385
+[]\OT1/ptm/m/n/8 400| 
+ []
+
+
+Overfull \hbox (3.4641pt too wide) in paragraph at lines 385--385
+[]\OT1/ptm/m/n/8 400| 
+ []
+
+
+Overfull \hbox (3.4641pt too wide) in paragraph at lines 385--385
+[]\OT1/ptm/m/n/8 400| 
+ []
+
+
+Overfull \hbox (5.19272pt too wide) in paragraph at lines 378--390
+ [] 
+ []
+
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 433.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+Overfull \hbox (16.58066pt too wide) in paragraph at lines 445--446
+[]\OT1/ptm/m/n/8 Super$\OML/cmm/m/it/8 B$ \OT1/ptm/m/n/8 Tech-ni-cal De-sign Re
+-port, []\OT1/pcr/m/n/8 http://arxiv.org/abs/1306.5655 
+ []
+
+[4 <./testbed-eps-converted-to.pdf>] (./paper.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 2256 strings out of 495059
+ 36299 string characters out of 3182029
+ 100689 words of memory out of 3000000
+ 5424 multiletter control sequences out of 15000+200000
+ 42398 words of font info for 80 fonts, out of 3000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 37i,9n,23p,1262b,257s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courie
+r/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/urw/times/utmri8a.pfb>
+Output written on paper.pdf (4 pages, 1061731 bytes).
+PDF statistics:
+ 284 PDF objects out of 1000 (max. 8388607)
+ 53 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+

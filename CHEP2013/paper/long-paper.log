@@ -1,0 +1,483 @@
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.10.25)  22 OCT 2013 19:01
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**long-paper.tex
+(./long-paper.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, lo
+aded.
+(./jpconf.cls
+Document Class: jpconf 2007/03/07 v1.1 LaTeX class for Journal of Physics: Conf
+erence Series
+(./jpconf11.clo
+File: jpconf11.clo 2005/05/04 v1.0 LaTeX2e file (size option)
+)
+\indentedwidth=\skip41
+\mathindent=\dimen102
+\c@oldftnote=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip42
+\belowcaptionskip=\skip43
+\bibindent=\dimen103
+\c@eqnval=\count87
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count89
+\lst@gtempboxa=\box26
+\lst@token=\toks15
+\lst@length=\count90
+\lst@currlwidth=\dimen106
+\lst@column=\count91
+\lst@pos=\count92
+\lst@lostspace=\dimen107
+\lst@width=\dimen108
+\lst@newlines=\count93
+\lst@lineno=\count94
+\lst@maxwidth=\dimen109
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+\c@lstnumber=\count95
+\lst@skipnumbers=\count96
+\lst@framebox=\box27
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2007/02/22 1.4 listings configuration
+))
+Package: listings 2007/02/22 1.4 (Carsten Heinz)
+
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen110
+)
+No file long-paper.aux.
+\openout1 = `long-paper.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count97
+\scratchdimen=\dimen111
+\scratchbox=\box28
+\nofMPsegments=\count98
+\nofMParguments=\count99
+\everyMPshowfont=\toks16
+\MPscratchCnt=\count100
+\MPscratchDim=\dimen112
+\MPnumerator=\count101
+\makeMPintoPDFobject=\count102
+\everyMPtoPDFconversion=\toks17
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\c@lstlisting=\count103
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <18.06749> not available
+(Font)              size <17.28> substituted on input line 6.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <18.06749> not available
+(Font)              size <17.28> substituted on input line 6.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 8.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 8.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 8.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 9.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 9.
+Missing character: There is no â in font cmr9!
+Missing character: There is no € in font cmr9!
+Missing character: There is no “ in font cmr9!
+Missing character: There is no â in font cmr9!
+Missing character: There is no € in font cmr9!
+Missing character: There is no “ in font cmr9!
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Citation `ref:dirac' on page 2 undefined on input line 61.
+
+
+LaTeX Warning: Reference `fig:project_bird_eye' on page 2 undefined on input li
+ne 61.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--62
+
+ []
+
+
+LaTeX Warning: Citation `ref:postgres' on page 2 undefined on input line 64.
+
+
+LaTeX Warning: Citation `ref:sqlalchemy' on page 2 undefined on input line 64.
+
+Package epstopdf Info: Source file: <img/project_bird_eye_2.eps>
+(epstopdf)                    date: 2013-10-10 23:42:21
+(epstopdf)                    size: 9252598 bytes
+(epstopdf)             Output file: <img/project_bird_eye_2-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2013-10-10 23:42:33
+(epstopdf)                    size: 314522 bytes
+(epstopdf)             Command: <repstopdf --outfile=img/project_bird_eye_2-eps
+-converted-to.pdf img/project_bird_eye_2.eps>
+(epstopdf)             \includegraphics on input line 69.
+Package epstopdf Info: Output file is already uptodate.
+
+<img/project_bird_eye_2-eps-converted-to.pdf, id=14, 1215.54124pt x 1007.765pt>
+File: img/project_bird_eye_2-eps-converted-to.pdf Graphic file (type pdf)
+<use img/project_bird_eye_2-eps-converted-to.pdf>
+Package pdftex.def Info: img/project_bird_eye_2-eps-converted-to.pdf used on in
+put line 69.
+(pdftex.def)             Requested size: 312.0pt x 258.66048pt.
+
+
+LaTeX Warning: Citation `ref:superb_tdr' on page 2 undefined on input line 81.
+
+
+LaTeX Warning: Reference `sec:db' on page 2 undefined on input line 83.
+
+[2 <./img/project_bird_eye_2-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `fig:BK_entities' on page 3 undefined on input line 93
+.
+
+[3]
+
+LaTeX Warning: Reference `fig:BK_entities' on page 4 undefined on input line 12
+7.
+
+Package epstopdf Info: Source file: <img/BK_entities.eps>
+(epstopdf)                    date: 2013-09-30 11:49:07
+(epstopdf)                    size: 55320 bytes
+(epstopdf)             Output file: <img/BK_entities-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-09-30 11:50:32
+(epstopdf)                    size: 34008 bytes
+(epstopdf)             Command: <repstopdf --outfile=img/BK_entities-eps-conver
+ted-to.pdf img/BK_entities.eps>
+(epstopdf)             \includegraphics on input line 133.
+Package epstopdf Info: Output file is already uptodate.
+<img/BK_entities-eps-converted-to.pdf, id=232, 710.655pt x 237.88875pt>
+File: img/BK_entities-eps-converted-to.pdf Graphic file (type pdf)
+
+<use img/BK_entities-eps-converted-to.pdf>
+Package pdftex.def Info: img/BK_entities-eps-converted-to.pdf used on input lin
+e 133.
+(pdftex.def)             Requested size: 312.0pt x 104.44267pt.
+Package epstopdf Info: Source file: <img/SBKService.eps>
+(epstopdf)                    date: 2013-10-08 17:38:33
+(epstopdf)                    size: 781874 bytes
+(epstopdf)             Output file: <img/SBKService-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-08 17:40:14
+(epstopdf)                    size: 83906 bytes
+(epstopdf)             Command: <repstopdf --outfile=img/SBKService-eps-convert
+ed-to.pdf img/SBKService.eps>
+(epstopdf)             \includegraphics on input line 138.
+Package epstopdf Info: Output file is already uptodate.
+
+<img/SBKService-eps-converted-to.pdf, id=233, 541.02126pt x 276.03125pt>
+File: img/SBKService-eps-converted-to.pdf Graphic file (type pdf)
+
+<use img/SBKService-eps-converted-to.pdf>
+Package pdftex.def Info: img/SBKService-eps-converted-to.pdf used on input line
+ 138.
+(pdftex.def)             Requested size: 312.0pt x 159.18846pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4 <./img/BK_entities-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <img/severus_workflow.eps>
+(epstopdf)                    date: 2013-10-08 11:32:40
+(epstopdf)                    size: 67711 bytes
+(epstopdf)             Output file: <img/severus_workflow-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2013-10-08 11:35:38
+(epstopdf)                    size: 38074 bytes
+(epstopdf)             Command: <repstopdf --outfile=img/severus_workflow-eps-c
+onverted-to.pdf img/severus_workflow.eps>
+(epstopdf)             \includegraphics on input line 155.
+Package epstopdf Info: Output file is already uptodate.
+
+<img/severus_workflow-eps-converted-to.pdf, id=243, 873.2625pt x 235.88126pt>
+File: img/severus_workflow-eps-converted-to.pdf Graphic file (type pdf)
+
+<use img/severus_workflow-eps-converted-to.pdf>
+Package pdftex.def Info: img/severus_workflow-eps-converted-to.pdf used on inpu
+t line 155.
+(pdftex.def)             Requested size: 312.0pt x 84.27652pt.
+
+
+LaTeX Warning: Citation `ref:webui' on page 5 undefined on input line 178.
+
+
+LaTeX Warning: Citation `ref:ganga' on page 5 undefined on input line 180.
+
+
+LaTeX Warning: Reference `sec:severus' on page 5 undefined on input line 180.
+
+
+LaTeX Warning: Reference `fig:simulation_production_workflow' on page 5 undefin
+ed on input line 180.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--181
+
+ []
+
+[5 <./img/SBKService-eps-converted-to.pdf> <./img/severus_workflow-eps-converte
+d-to.pdf>]
+
+LaTeX Warning: Reference `sec:test' on page 6 undefined on input line 186.
+
+Package epstopdf Info: Source file: <img/simulation_production_system_workflow.
+eps>
+(epstopdf)                    date: 2013-09-30 11:28:06
+(epstopdf)                    size: 544466 bytes
+(epstopdf)             Output file: <img/simulation_production_system_workflow-
+eps-converted-to.pdf>
+(epstopdf)                    date: 2013-09-30 11:41:51
+(epstopdf)                    size: 184008 bytes
+(epstopdf)             Command: <repstopdf --outfile=img/simulation_production_
+system_workflow-eps-converted-to.pdf img/simulation_production_system_workflow.
+eps>
+(epstopdf)             \includegraphics on input line 193.
+Package epstopdf Info: Output file is already uptodate.
+
+<img/simulation_production_system_workflow-eps-converted-to.pdf, id=252, 326.21
+875pt x 213.79875pt>
+File: img/simulation_production_system_workflow-eps-converted-to.pdf Graphic fi
+le (type pdf)
+
+<use img/simulation_production_system_workflow-eps-converted-to.pdf>
+Package pdftex.def Info: img/simulation_production_system_workflow-eps-converte
+d-to.pdf used on input line 193.
+(pdftex.def)             Requested size: 312.0pt x 204.49739pt.
+Package epstopdf Info: Source file: <img/SuperBDIRAC_monitoring.eps>
+(epstopdf)                    date: 2013-09-30 13:00:54
+(epstopdf)                    size: 545250 bytes
+(epstopdf)             Output file: <img/SuperBDIRAC_monitoring-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2013-09-30 13:01:16
+(epstopdf)                    size: 466725 bytes
+(epstopdf)             Command: <repstopdf --outfile=img/SuperBDIRAC_monitoring
+-eps-converted-to.pdf img/SuperBDIRAC_monitoring.eps>
+(epstopdf)             \includegraphics on input line 198.
+Package epstopdf Info: Output file is already uptodate.
+
+<img/SuperBDIRAC_monitoring-eps-converted-to.pdf, id=253, 1104.125pt x 597.2312
+5pt>
+File: img/SuperBDIRAC_monitoring-eps-converted-to.pdf Graphic file (type pdf)
+ <use img/SuperBDIRAC_monitoring-eps-converted-to.pdf>
+Package pdftex.def Info: img/SuperBDIRAC_monitoring-eps-converted-to.pdf used o
+n input line 198.
+(pdftex.def)             Requested size: 312.0pt x 168.7637pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[6 <./img/simulation_production_system_workflow-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <img/testbed.eps>
+(epstopdf)                    date: 2013-09-28 19:23:56
+(epstopdf)                    size: 30251 bytes
+(epstopdf)             Output file: <img/testbed-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-09-28 19:31:09
+(epstopdf)                    size: 17491 bytes
+(epstopdf)             Command: <repstopdf --outfile=img/testbed-eps-converted-
+to.pdf img/testbed.eps>
+(epstopdf)             \includegraphics on input line 213.
+Package epstopdf Info: Output file is already uptodate.
+
+<img/testbed-eps-converted-to.pdf, id=260, 395.4775pt x 345.29pt>
+File: img/testbed-eps-converted-to.pdf Graphic file (type pdf)
+
+<use img/testbed-eps-converted-to.pdf>
+Package pdftex.def Info: img/testbed-eps-converted-to.pdf used on input line 21
+3.
+(pdftex.def)             Requested size: 168.0pt x 146.68044pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--221
+
+ []
+
+[7 <./img/SuperBDIRAC_monitoring-eps-converted-to.pdf> <./img/testbed-eps-conve
+rted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 224--225
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 226--227
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 228--229
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 234--239
+
+ []
+
+
+LaTeX Warning: Reference `tab:execution_time' on page 8 undefined on input line
+ 244.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (12.55394pt too wide) in paragraph at lines 271--282
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `tab:status_update' on page 8 undefined on input line 
+286.
+
+[8] [9] [10] (./long-paper.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.78749pt have occurred.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 2924 strings out of 495059
+ 41525 string characters out of 3182029
+ 105425 words of memory out of 3000000
+ 6090 multiletter control sequences out of 15000+200000
+ 9371 words of font info for 33 fonts, out of 3000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 38i,7n,32p,801b,287s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on long-paper.pdf (10 pages, 1337829 bytes).
+PDF statistics:
+ 331 PDF objects out of 1000 (max. 8388607)
+ 86 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+
